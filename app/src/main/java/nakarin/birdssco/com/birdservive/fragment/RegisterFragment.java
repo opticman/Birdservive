@@ -1,5 +1,6 @@
 package nakarin.birdssco.com.birdservive.fragment;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -7,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import nakarin.birdssco.com.birdservive.MainActivity;
 import nakarin.birdssco.com.birdservive.R;
@@ -17,6 +19,10 @@ import nakarin.birdssco.com.birdservive.R;
 
 public class RegisterFragment extends Fragment {
 
+    //Explicit
+    private String nameString, userString, passwordString;
+
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -25,6 +31,23 @@ public class RegisterFragment extends Fragment {
 //        Create Toolber
 
         createToolber();
+
+//        Save Controller
+        saveController();
+
+
+    }
+
+    private void saveController() {
+        ImageView imageView = getView().findViewById(R.id.imvSave);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+
+            }
+        });
     }
 
     private void createToolber() {
